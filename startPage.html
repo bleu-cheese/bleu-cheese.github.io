@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 2</title>
+    <title>Start Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container" id="welcomeScreenContainer">
-        <h1>Which Taw Family Member Are You?</h1>
-        <a href="startPage.html"> <button id="startbutton">Click to Start!</button>
-        </a>
+<body onload = "startQuiz()">
+    <div class="container" id = "quiz-container">
+        <h2 id = "question">Loading...</h2>
+        <div id="choices"></div>
     </div>
     <script src="script.js"></script>
 </body>

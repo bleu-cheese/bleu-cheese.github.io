@@ -1,0 +1,55 @@
+/* https://www.happyhues.co/palettes/10 */
+body {
+    background-color:#004643;
+    font-family: "Courier New";
+    text-align: center;
+    color: #fffffe;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+button {
+    font-family: "Courier New";
+    background-color: #f9bc60;
+    color: #001e1d;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ffce85;
+}
+
+.choiceButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#welcomeScreenContainer {
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 20px;  /* Optional: Adds spacing inside the box */
+  display: inline-block; /* Ensures the border wraps the content properly */
+}
+
+#quiz-container {
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 20px;  /* Optional: Adds spacing inside the box */
+  display: inline-block; /* Ensures the border wraps the content properly */
+}
