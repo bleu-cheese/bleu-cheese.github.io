@@ -4,21 +4,29 @@
     box-sizing: border-box;
 }
 
+/* Mobile Responsive Layout */
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr; /* Stacks everything in one column */
-        grid-template-rows: auto auto auto auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
     }
 
-    .header,
     .sidebar-left,
     .main-content,
-    .sidebar-right {
-        grid-column: span 1; /* Each section takes full width */
+    .sidebar-right,
+    .startOverButton,
+    .score-container {
+        width: 100%;
     }
 
     .sidebar-right {
-        flex-direction: column; /* Keeps the right boxes stacked */
+        flex-direction: column;
+    }
+
+    .header {
+        font-size: 1.5em;
     }
 }
 
@@ -34,22 +42,31 @@ body {
 
 .container {
     display: grid;
-    width: 90%;
+    grid-template-areas:
+      "header header header"
+      "sidebar-left main-content sidebar-right"
+      "score score score"
+      "bottom bottom bottom";
+    width: 100%;
     max-width: 1200px;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto 1fr;
     gap: 20px;
     padding: 20px;
-    /* background-color: #004643; */
-    /* background-color: #abd1c6; */
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border: 2px solid black;
+    overflow: hidden;
+    margin: auto;
 }
 
 /* Header spans across all columns */
 .header {
+    word-break: break-word;
+    overflow-x: hidden;
+    grid-area: header;
+    overflow-wrap: break-word;
     grid-column: span 3;
     background-color: #abd1c6;
     padding: 20px;
@@ -75,14 +92,18 @@ body {
 
 /* Left Sidebar */
 .sidebar-left {
+    grid-area: sidebar-left;
     font-family: "Arial";
     background-color: #f9bc60;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     border: 2px solid black;
     opacity: 0;
     transform: translateX(-50px); /* Start off-screen */
     animation: slideInFromLeft 1s ease-out forwards;
+    min-width: 0; /* Prevents the box from exceeding container width */
+    max-width: 100%; /* Ensures it doesn’t stretch beyond */
+    word-wrap: break-word; /* Ensures long words don’t overflow */
 }
 @keyframes slideInFromLeft {
   from {
@@ -91,20 +112,22 @@ body {
   }
   to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
   }
 }
 
 /* Main Content */
 .main-content {
+    grid-area: main-content;
     font-family: "Arial";
     background-color: #f9bc60;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     border: 2px solid black;
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Slightly move down */
     animation: fadeIn 0.8s ease-out forwards;
+    word-wrap: break-word;
 }
 @keyframes fadeIn {
     from {
@@ -133,13 +156,17 @@ body {
 
 /* Right Sidebar with stacked boxes */
 .sidebar-right {
+    grid-area: sidebar-right;
+    flex-direction: column;
     font-family: "Arial";
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     opacity: 0;
     transform: translateX(50px); /* Start off-screen */
     animation: slideInFromRight 1s ease-out forwards;
+    min-width: 0; /* Prevents the box from exceeding container width */
+    max-width: 100%; /* Ensures it doesn’t stretch beyond */
+    word-wrap: break-word; /* Ensures long words don’t overflow */
 }
 @keyframes slideInFromRight {
   from {
@@ -148,16 +175,19 @@ body {
   }
   to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
   }
 }
 .sidebar-right .box {
     background-color: #f9bc60;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     border: 2px solid black;
+    word-wrap:break-word;
 }
 .startOverButton {
+  grid-area: bottom;
+  text-align: center;
   opacity: 0;
   transform: translateX(-50px); /* Start off-screen */
   animation: slideInFromLeft 1s ease-out forwards;
@@ -178,6 +208,8 @@ button:hover {
 }
 
 .score-container {
+    grid-area: score;
+    text-align: center;
     width: 100%;
     background: #f9bc60;
     padding: 20px;
