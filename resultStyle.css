@@ -7,8 +7,14 @@
 /* Mobile Responsive Layout */
 @media (max-width: 768px) {
     .container {
-        display: flex;
-        flex-direction: column;
+        grid-template-areas:
+          "header"
+          "sidebar-left"
+          "main-content"
+          "sidebar-right"
+          "score"
+          "bottom";
+        display: grid;
         gap: 20px;
         padding: 10px;
     }
@@ -22,11 +28,8 @@
     }
 
     .sidebar-right {
-        flex-direction: column;
-    }
-
-    .header {
-        font-size: 1.5em;
+      display: grid;
+        gap: 10px;
     }
 }
 
