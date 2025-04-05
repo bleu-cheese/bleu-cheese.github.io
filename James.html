@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James</title>
-    <link rel="stylesheet" href="style.css">
+    <title>James Personality Profile</title>
+    <link rel="stylesheet" href="resultStyle.css">
 </head>
 <body>
     <div class="container">
-        <h1>You are James</h1>
+      <header class="header">YOU ARE JAMES</header>
+      <aside class="sidebar-left"><b>What your family says about you:</b>
+        <ul>
+          <li>Abi: "He's cuddly"</li>
+          <li>Dad: "I tell him, video game is no good."</li>
+          <li>Lydia: "I think dad needs to get to know the new James" </li>
+          <li> Isaak: "James is actually my favorite person" </li>
+          </ul>
+      </aside>
+      <main class="main-content">
+        You are so chill. You previously had a reputation not unlike class clown (but in society) because
+        you are effortlessly funny and people admire you for your self-confidence. As of late, you have matured and deepened
+        into a very thoughtful individual and you are just figuring out how to communicate your thoughts, emotions and feelings as
+        a well-adjusted adult. You care not, but deep down inside, despite the hehe haha, you do care about those close to you
+        and the world at large.
+      </main>
+      <aside class="sidebar-right">
+        <div class="box"><b>Superpowers</b>
+          <ol>
+            <li>Cooks the meanest steak in town, loves to cook for your friends</li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+        <div class="box"><b>Growth Areas</b>
+          <ol>
+            <li>You're not an overthinker. But you worry about overthinking, which then
+            leads you to overthinking overthinking.</li>
+            <li>You have a love hate relationship with the family dog because it's cute but won't
+            do what you want it to</li>
+            <li></li>
+          </ol>
+        </div>
+      </aside>
+      <div class="startOverButton">
+        <a href="index.html"><button>Start Over</button></a>
+      </div>
+      <div class="score-container">
+          <label for="scoreA">Emotional Control:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barA" data-value="65"></div>
+          </div>
+          <label for="scoreB">Humor:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barB" data-value="100"></div>
+          </div>
+          <label for="scoreC">Fear:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barC" data-value="1"></div>
+          </div>
+      </div>
     </div>
-    <script src="script.js"></script>
+    <script src="resultsJS.js"></script>
 </body>
 </html>

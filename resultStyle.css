@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     font-family:  "Courier New";
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background-color: #abd1c6; */
     background-color: #004643;
 }
 
@@ -55,16 +52,7 @@ body {
     transform: translateY(-50px); /* Start off-screen */
     animation: slideInFromTop 1s ease-out forwards;
   }
-  @keyframes slideInFromTop {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 /* Left Sidebar */
 .sidebar-left {
@@ -81,18 +69,8 @@ body {
     max-width: 100%; /* Ensures it doesn’t stretch beyond */
     word-wrap: break-word; /* Ensures long words don’t overflow */
 }
-@keyframes slideInFromLeft {
-  from {
-      opacity: 0;
-      transform: translateX(-50px);
-  }
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
 
-/* Main Content */
+/* Character description */
 .main-content {
     grid-area: main-content;
     font-family: "Arial";
@@ -105,16 +83,8 @@ body {
     animation: fadeIn 0.8s ease-out forwards;
     word-wrap: break-word;
 }
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
+/* Hover animations. TODO: can these be combined? */
 .main-content:hover {
   background-color: #f9ba90;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, .5);
@@ -123,11 +93,9 @@ body {
   background-color: #f9ba90;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, .5);
 }
-
 .sidebar-right .box:hover {
   background-color: #f9ba90;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, .5);
-
 }
 
 /* Right Sidebar with stacked boxes */
@@ -144,16 +112,6 @@ body {
     max-width: 100%; /* Ensures it doesn’t stretch beyond */
     word-wrap: break-word; /* Ensures long words don’t overflow */
 }
-@keyframes slideInFromRight {
-  from {
-      opacity: 0;
-      transform: translateX(50px);
-  }
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
 .sidebar-right .box {
     background-color: #f9bc60;
     padding: 15px;
@@ -161,6 +119,8 @@ body {
     border: 2px solid black;
     word-wrap:break-word;
 }
+
+/* Start over button */
 .startOverButton {
   grid-area: bottom;
   text-align: center;
@@ -178,11 +138,11 @@ button {
     border-radius: 12px;
     cursor: pointer;
 }
-
 button:hover {
     background-color: #ffce85;
 }
 
+/* Progress bar */
 .score-container {
     grid-area: score;
     text-align: center;
@@ -196,39 +156,13 @@ button:hover {
     animation: slideInFromBottom 1s ease-out forwards;
 
 }
-@keyframes slideInFromBottom {
-  from {
-      opacity: 0;
-      transform: translateY(50px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
 .score-container:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, .5);
 }
-.mapContainer {
-  width: 100%;
-  background: #f9bc60;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid black;
-  opacity: 0;
-  transform: translateY(50px); /* Start off-screen */
-  animation: slideInFromBottom 1s ease-out forwards;
-}
+
 label {
     display: block;
     margin: 10px 0 5px;
-}
-
-input {
-    width: 60px;
-    padding: 5px;
-    margin-bottom: 10px;
 }
 
 .progress-bar {
@@ -251,26 +185,63 @@ ul, ol {
     padding-left: 20px; /* Make sure bullets/numbers stay inside */
     margin-left: 0; /* Remove extra left margin */
 }
-
-.image-container {
-    width: 400px;
-    height: 300px;
-    overflow: hidden; /* Hides excess parts */
-    border-radius: 15px;
+@keyframes slideInFromBottom {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
-
-.image-container img {
-    width: 100%; /* Makes the image fill the div */
-    height: auto;
+@keyframes slideInFromTop {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
-
+@keyframes slideInFromLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Mobile Responsive Layout */
 @media (max-width: 768px) {
     .container {
         grid-template-areas:
           "header"
-          "sidebar-left"
           "main-content"
+          "sidebar-left"
           "sidebar-right"
           "score"
           "bottom";
@@ -278,6 +249,7 @@ ul, ol {
         gap: 5px;
         padding: 10px;
         background-color: #004643;
+        border: none;
     }
 
     .header,
@@ -303,7 +275,6 @@ ul, ol {
     }
 }
 
-/* Example fade-in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;

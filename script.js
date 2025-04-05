@@ -13,7 +13,7 @@ const questions = [
   {
     question: "What's the first thing you do?",
     choices: {
-      "Sit on the edge of your bed with your eyes closed. Like a potato after being microwaved, you are resting ": ["Abi", "Dad"],
+      "Sit on the edge of your bed with your eyes closed. Like a potato after being microwaved, you are resting ": ["Abi", "Ken"],
         "Get out of bed immediately" : ["James", "Mom"],
         "Hit snooze" : ["Lydia", "Isaak"]
       },
@@ -23,7 +23,7 @@ const questions = [
     question: "Oh no! You're late! What do you do?",
     choices: {
       "Panic. Run out of the door, leaving things behind" : ["Lydia", "Mom"],
-      "Eh, it's okay. Take your time." : ["Dad", "James"],
+      "Eh, it's okay. Take your time." : ["Ken", "James"],
       "Remain calm. Think clearly. Accept your lateness and move quickly." : ["Isaak", "Abi"]
     },
     next:[3, 3, 3]
@@ -62,7 +62,7 @@ const questions = [
     choices:
     {
       "You know everyone’s favorite foods. You’ve designed a menu based on that and cross-checked it against current sales to create a shopping list.": ["Lydia", "Rose"],
-       "Steak (that you will grill yourself of course) and instant mashed potatoes" : ["James", "Dad"],
+       "Steak (that you will grill yourself of course) and instant mashed potatoes" : ["James", "Ken"],
        "You’re trying a new dish with a complex, colorful palette. Requires many new ingredients and seasonings" : ["Isaak", "Abi"]
     },
     next: [7, 7, 7]
