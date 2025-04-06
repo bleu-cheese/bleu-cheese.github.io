@@ -33,7 +33,7 @@ const questions = [
     choices: {
       "Call AAA because you are a member." : ["Ken"],
       "Panic" : ["Lydia", "Rose"],
-      "Put airpods in. Poke around. Looks okay. Keep driving" : ["James"],
+      "Put airpods in. Poke around." : ["James"],
       "Roll up your sleeves and replace the tire yourself. No biggie." : ["Isaak", "Abi"]
     },
     next:[4, 4, 4, 4]

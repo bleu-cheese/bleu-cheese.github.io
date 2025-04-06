@@ -1,4 +1,3 @@
-/* https://www.happyhues.co/palettes/10 */
 body {
     background-color:#004643;
     font-family: "Courier New";
@@ -45,6 +44,11 @@ button:active {
   gap: 10px;
   flex-wrap: wrap;
   padding: 20px;
+}
+
+img {
+  width:100%;
+  height: auto;
 }
 
 #welcomeScreenContainer {
