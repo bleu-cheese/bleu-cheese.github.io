@@ -147,7 +147,5 @@ function gameOver() {
   let [highestScorer, highestScore] = Object.entries(userScore).reduce((max, entry) =>
     entry[1] > max[1] ? entry : max
   );
-
-  alert(`Highest Scorer: ${highestScorer} with ${highestScore} points`);
   window.location.href = `${highestScorer}.html`;
 }

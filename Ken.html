@@ -4,12 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ken</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resultStyle.css">
 </head>
 <body>
     <div class="container">
-        <h1>You are Ken</h1>
+      <header class="header">YOU ARE KEN</header>
+      <aside class="sidebar-left"><b>What your family says about you:</b>
+        <ul>
+          <li></li>
+          <li></li>
+          </ul>
+      </aside>
+      <main class="main-content">
+        You are committed, loyal, hard-working. Friends describe you as wise. You are known
+        for your laughter, as you often find things funny (including yourself). You sacrifice yourself
+        for those you love the most. You have anxiety about things easily, like money. But your anxiety
+        is forgotten when it comes to loving those you care about. You are very loyal to your beliefs
+        and like to engage in conversation about what you think is right. Your loved ones often want you to
+        look out for yourself and to worry less, but really all you want is for them to be safe and happy.
+        You are on a constant journey of self-betterment; you are passionate about following the right path
+        and becoming the person you are meant to be.
+        You love good food and coffee.
+      </main>
+      <aside class="sidebar-right">
+        <div class="box"><b>Superpowers</b>
+          <ol>
+            <li>Cooking, especially for your loved ones</li>
+            <li>Locking in, whether it's work or faith or family</li>
+            <li>Extremely supportive of your loved ones. Will drop whatever you're doing to do anything for them</li>
+          </ol>
+        </div>
+        <div class="box"><b>Growth Areas</b>
+          <ol>
+            <li>Has a hard time letting go of things</li>
+            <li>Needs new socks (wears old ones with holes in them)</li>
+            <li>Gets anxious easily</li>
+          </ol>
+        </div>
+      </aside>
+      <div class="startOverButton">
+        <a href="index.html"><button>Start Over</button></a>
+      </div>
+      <div class="score-container">
+          <label for="scoreA">Emotional Control:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barA" data-value="50"></div>
+          </div>
+          <label for="scoreB">Humor:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barB" data-value="60"></div>
+          </div>
+          <label for="scoreC">Fear:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barC" data-value="80"></div>
+          </div>
+      </div>
     </div>
-    <script src="script.js"></script>
+    <script src="resultsJS.js"></script>
 </body>
 </html>

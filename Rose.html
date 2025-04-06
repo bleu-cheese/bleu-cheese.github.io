@@ -4,12 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rose</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resultStyle.css">
 </head>
 <body>
     <div class="container">
-        <h1>You are Rose</h1>
+      <header class="header">YOU ARE ROSE</header>
+      <aside class="sidebar-left"><b>What your family says about you:</b>
+        <ul>
+          <li>James: "Mom is very cute"</li>
+          <li>Isaak: "She is more brave than people give her credit for"</li>
+          </ul>
+      </aside>
+      <main class="main-content">
+        You are passionate, kind, and curious. You love learning new things. You are brave. If you don't know something, you
+        will figure it out.
+        You want to help others with your skills and with your time. You're not afraid of much when it comes to yourself,
+        but you are often worried about your loved ones and you do everything in your power to make sure they are safe.
+        You are level-headed and don't often get caught up in drama. You are day-dreamy.
+      </main>
+      <aside class="sidebar-right">
+        <div class="box"><b>Superpowers</b>
+          <ol>
+            <li>Very creative</li>
+            <li>Determined and tenacious. Once you've set your mind to something, you will achieve it</li>
+            <li>Biggest heart</li>
+          </ol>
+        </div>
+        <div class="box"><b>Growth Areas</b>
+          <ol>
+            <li>You need to stand up for yourself more often</li>
+            <li>Directionally challenged</li>
+            <li>Mildly forgetful, but only because your mind is in more important places</li>
+          </ol>
+        </div>
+      </aside>
+      <div class="startOverButton">
+        <a href="index.html"><button>Start Over</button></a>
+      </div>
+      <div class="score-container">
+          <label for="scoreA">Emotional Control:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barA" data-value="60"></div>
+          </div>
+          <label for="scoreB">Humor:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barB" data-value="50"></div>
+          </div>
+          <label for="scoreC">Fear:</label>
+          <div class="progress-bar">
+              <div class="progress" id="barC" data-value="15"></div>
+          </div>
+      </div>
     </div>
-    <script src="script.js"></script>
+    <script src="resultsJS.js"></script>
 </body>
 </html>
